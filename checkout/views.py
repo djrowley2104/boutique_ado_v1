@@ -87,8 +87,8 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret,
+        'stripe_public_key': 'pk_test_51IIqVcGVQVSxnw1Z0ZCVx9vAJinDpqHTLNT3OkAxHtmR9GqFFqzxZve6lgNdqOqHPFXy5sWF48orrPO53BFudSiA00b099jxOv',
+        'client_secret': 'sk_test_51IIqVcGVQVSxnw1Z6vzOQSWD5IcKiTHVgTNEI9XyBHMxY7QIpD5t9VAXbM23xhUJ6vjjzTLjyggjcCE3xTW4ujLU00i67GuW8Z',
     }
 
     return render(request, template, context)
@@ -110,6 +110,8 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'stripe_public_key': 'pk_test_51IIqVcGVQVSxnw1Z0ZCVx9vAJinDpqHTLNT3OkAxHtmR9GqFFqzxZve6lgNdqOqHPFXy5sWF48orrPO53BFudSiA00b099jxOv',
+        'client_secret': 'sk_test_51IIqVcGVQVSxnw1Z6vzOQSWD5IcKiTHVgTNEI9XyBHMxY7QIpD5t9VAXbM23xhUJ6vjjzTLjyggjcCE3xTW4ujLU00i67GuW8Z',
     }
 
     return render(request, template, context)
